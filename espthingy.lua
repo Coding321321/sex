@@ -12,7 +12,7 @@ local Create = Drawing.new()
 
 
 function espModule:CreateLine(Visible, Thickness, Color3, Transparency, HRP)
-	local Line = Drawing.new("Line")
+local Line = Drawing.new("Line")
 	Line.Visible = Visible
 	Line.Thickness = Thickness
 	Line.Color = Color3
@@ -20,22 +20,36 @@ function espModule:CreateLine(Visible, Thickness, Color3, Transparency, HRP)
 	
 	game:GetService("RunService").RenderStepped:Connect(function()
 	local Vector, OnScreen = camera:worldToViewportPoint(HRP.Position) -- and not v = player :Shrug:
+		
 		if OnScreen then
+		    
 			Line.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
-			Line.To = Vector2.new(Vector.x, Vector.Y)
+			
+			Line.To = Vector2.new(Vector.X, Vector.Y)
 		end
 	end)
 
 end
 
 function espModule:CreateCircle(Visible, Thickness, Color3, Transparency, Filled, Radius)
-	local Line = Drawing.new("Circle")
+	local Circle = Drawing.new("Circle")
+	
 	Circle.Visible = Visible
 	Circle.Thickness = Thickness
 	Circle.Color = Color3
 	Circle.Transparency = Transparency
     	Circle.Filled = Filled
-    	Circle.Radius = Circle.Radius
+    	Circle.Radius = Radius
+    
+    	if Position == nil then
+        	Position = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
+    	end
+
+    
+   	 game.RunService.RenderStepped:Connect(function()
+       	 	Circle.Position = Position
+  	 end)
+    
 end
 
 
