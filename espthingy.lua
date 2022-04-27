@@ -30,7 +30,7 @@ function espModule:CreateLine(Visible, Thickness, Color3, Transparency, HRP)
 end)
 
 end
-
+--[[
 function espModule:CreateCircle(Visible, Thickness, Color3, Transparency, Filled, Radius, Position)
 
     if Position == nil then
@@ -47,6 +47,7 @@ function espModule:CreateCircle(Visible, Thickness, Color3, Transparency, Filled
     Circle.Position = Position
 
 end
+--]]
 --[[
 function espModule:CreateBox(Visible, Transparency, Color3, Thickness, Size, Item, Filled, Type)
     
