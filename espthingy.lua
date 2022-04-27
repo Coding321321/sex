@@ -47,7 +47,7 @@ function espModule:CreateCircle(Visible, Thickness, Color3, Transparency, Filled
     Circle.Position = Position
 
 end
-
+--[[
 function espModule:CreateBox(Visible, Transparency, Color3, Thickness, Size, Item, Filled, Type)
     
     local BoxOutline = Drawing.new("Square")
@@ -116,5 +116,5 @@ function espModule:CreateBox(Visible, Transparency, Color3, Thickness, Size, Ite
     end)
 
 end
-
+]]
 return espModule
