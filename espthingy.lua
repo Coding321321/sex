@@ -1,4 +1,3 @@
-
 local espModule = {}
 
 -- // Services 
@@ -29,5 +28,16 @@ function espModule:CreateLine(Visible, Thickness, Color3, Transparency, HRP)
 	end)
 
 end
+
+function espModule:CreateLine(Visible, Thickness, Color3, Transparency, Filled, Radius)
+	local Line = Drawing.new("Circle")
+	Circle.Visible = Visible
+	Circle.Thickness = Thickness
+	Circle.Color = Color3
+	Circle.Transparency = Transparency
+    Circle.Filled = Filled
+    Circle.Radius = Circle.Radius
+end
+
 
 return espModule
