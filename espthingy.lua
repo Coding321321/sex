@@ -25,9 +25,10 @@ function espModule:CreateLine(Visible, Thickness, Color3, Transparency, HRP)
 		if OnScreen then
 			Line.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
 			Line.To = Vector2.new(Vector.x, Vector.Y)
-		end
 		else
-		Line.Visible = false	
+			Line.Visible = false
+			print"bruh"
+		end
 	end)
 
 end
