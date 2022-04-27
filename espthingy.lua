@@ -32,9 +32,9 @@ local Line = Drawing.new("Line")
 	
         HRP.Parent.Humanoid.Died:Connect(function()
             Line:Remove()
-        end
+        end)
 
-        game.Players.PlayerRemoved:Connect(function(plr)
+        game:GetService("Players").PlayerRemoved:Connect(function(plr)
             if HRP.Parent.Name == plr.Name then
                 Line:Remove()
             end
