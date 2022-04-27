@@ -21,13 +21,19 @@ local Line = Drawing.new("Line")
 	game:GetService("RunService").RenderStepped:Connect(function()
 	local Vector, OnScreen = camera:worldToViewportPoint(HRP.Position) -- and not v = player :Shrug:
 		
+
+    
 		if OnScreen then
 		    
 			Line.From = Vector2.new(camera.ViewportSize.X / 2, camera.ViewportSize.Y / 2)
 			
 			Line.To = Vector2.new(Vector.X, Vector.Y)
 		end
-	end)
+	
+        if Players[HRP.Parent.Name] then
+            Line:Remove()
+        end
+    end)
 
 end
 
