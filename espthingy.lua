@@ -12,7 +12,6 @@ local Create = Drawing.new()
 
 
 function espModule:CreateLine(Visible, Thickness, Color3, Transparency, HRP)
-	print(Visible, Thickness, Color3, Transparency, HRP)
 	local Line = Drawing.new("Line")
 	Line.Visible = Visible
 	Line.Thickness = Thickness
@@ -35,8 +34,8 @@ function espModule:CreateLine(Visible, Thickness, Color3, Transparency, Filled, 
 	Circle.Thickness = Thickness
 	Circle.Color = Color3
 	Circle.Transparency = Transparency
-    Circle.Filled = Filled
-    Circle.Radius = Circle.Radius
+    	Circle.Filled = Filled
+    	Circle.Radius = Circle.Radius
 end
 
 
