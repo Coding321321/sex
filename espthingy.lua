@@ -28,7 +28,7 @@ function espModule:CreateLine(Visible, Thickness, Color3, Transparency, HRP)
 
 end
 
-function espModule:CreateLine(Visible, Thickness, Color3, Transparency, Filled, Radius)
+function espModule:CreateCircle(Visible, Thickness, Color3, Transparency, Filled, Radius)
 	local Line = Drawing.new("Circle")
 	Circle.Visible = Visible
 	Circle.Thickness = Thickness
