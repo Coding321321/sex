@@ -106,9 +106,6 @@ function espModule:CreateBox(Visible, Transparency, Color3, Thickness, Size, Ite
                         Box.Visible = false
                         BoxOutline.Visible = false        
                     end
-                else
-                    Box.Visible = false
-                    BoxOutline.Visible = false        
                 end
             end
         end
